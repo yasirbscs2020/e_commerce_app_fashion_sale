@@ -1,3 +1,5 @@
+import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
+import 'package:e_commerce_app_fashion_sale/widgets/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -7,17 +9,20 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Form(
-          child: Padding(
-            padding:
-                const EdgeInsets.only(top: 25, left: 15, right: 15, bottom: 12),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                Text("Sign Up screen"),
-              ],
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const CmsBackButton(),
+            const Text("Sign Up"),
+            Form(
+              child: Column(
+                children: [
+                  cmsSizedBox(),
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
