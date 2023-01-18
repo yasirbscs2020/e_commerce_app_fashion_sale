@@ -1,5 +1,7 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
+import 'package:e_commerce_app_fashion_sale/ui/anonymous/login/login_screen.dart';
+import 'package:e_commerce_app_fashion_sale/ui/anonymous/widget/container_with_icon_widget.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
@@ -45,8 +47,14 @@ class SignUpPage extends StatelessWidget {
                       const CmsTextBoxWidget(
                           hintText: "password", labelText: "Password"),
                       cmsSizedBox(height: 15),
-                      InkWell(
-                        onTap: () {},
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginPage()),
+                          );
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -82,27 +90,12 @@ class SignUpPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.only(
-                                left: 20, right: 20, top: 15, bottom: 15),
-                            decoration: BoxDecoration(
-                                color: ColorPathConstants.whiteColor,
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Image.asset(
-                                ImagePathConstants.googleIconPath,
-                                height: 25),
-                          ),
+                          const ContainerWithIcon(
+                              imagePath: ImagePathConstants.googleIconPath),
                           cmsSizedBox(width: 15),
-                          Container(
-                            padding: const EdgeInsets.only(
-                                left: 25, right: 25, top: 20, bottom: 20),
-                            decoration: BoxDecoration(
-                                color: ColorPathConstants.whiteColor,
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Image.asset(
-                                ImagePathConstants.faceBookIconPath,
-                                height: 25),
-                          ),
+                          const ContainerWithIcon(
+                              imagePath: ImagePathConstants.faceBookIconPath),
+                          cmsSizedBox(width: 25),
                         ],
                       )
                     ],
