@@ -18,6 +18,7 @@ class ForgotPasswordPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              cmsSizedBox(height: 15),
               const CmsBackButton(),
               Padding(
                 padding: const EdgeInsets.only(

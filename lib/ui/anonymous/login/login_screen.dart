@@ -2,6 +2,7 @@ import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/forgot_password.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/widget/container_with_icon_widget.dart';
+import 'package:e_commerce_app_fashion_sale/ui/common/visual_search/visual_search_screen.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
@@ -21,6 +22,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            cmsSizedBox(height: 15),
             const CmsBackButton(),
             Padding(
               padding: const EdgeInsets.only(
@@ -72,7 +74,13 @@ class LoginPage extends StatelessWidget {
                       color: ColorPathConstants.whiteColor,
                       fontSize: 17,
                     ),
-                    onButtonPressed: () {},
+                    onButtonPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VisualSearchPage()),
+                      );
+                    },
                   ),
                 ],
               ),

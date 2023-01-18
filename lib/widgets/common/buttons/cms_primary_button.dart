@@ -6,7 +6,7 @@ class CmsPrimaryButton extends StatelessWidget {
   const CmsPrimaryButton(
       {required this.text,
       required this.widthDivisionValue,
-      required this.color,
+      this.color,
       required this.textStyle,
       this.height = 50,
       this.onButtonPressed,
@@ -15,7 +15,7 @@ class CmsPrimaryButton extends StatelessWidget {
   final String text;
   final double widthDivisionValue;
   final Function()? onButtonPressed;
-  final Color color;
+  final Color? color;
   final double height;
 
   final TextStyle textStyle;
@@ -28,10 +28,10 @@ class CmsPrimaryButton extends StatelessWidget {
           child: Container(
             height: height,
             width: sizingInformation.screenSize.width / widthDivisionValue,
-            decoration: BoxDecoration(
-              color: ColorPathConstants.redColor,
-              borderRadius: BorderRadius.circular(30),
-            ),
+            // decoration: BoxDecoration(
+            //   color: ColorPathConstants.redColor,
+            //   borderRadius: BorderRadius.circular(30),
+            // ),
             child: Material(
               borderRadius: BorderRadius.circular(30),
               color: color,
