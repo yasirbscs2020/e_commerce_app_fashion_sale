@@ -1,6 +1,7 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
-import 'package:e_commerce_app_fashion_sale/ui/anonymous/login/login_screen.dart';
+import 'package:e_commerce_app_fashion_sale/core/route/login_page_arguments.dart';
+import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/widget/container_with_icon_widget.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
@@ -50,11 +51,8 @@ class SignUpPage extends StatelessWidget {
                       cmsSizedBox(height: 15),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginPage()),
-                          );
+                          Navigator.pushNamed(context, RoutesName.login,
+                              arguments: LoginPageArguments("From Sign up"));
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,

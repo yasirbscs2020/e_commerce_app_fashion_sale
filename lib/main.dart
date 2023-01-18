@@ -1,4 +1,4 @@
-import 'package:e_commerce_app_fashion_sale/ui/anonymous/sign_up/sign_up_screen.dart';
+import 'package:e_commerce_app_fashion_sale/core/route/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,12 +10,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: getAppRoutes(),
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce App Fashion Sale',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignUpPage(),
+      initialRoute: '/',
+      onGenerateRoute: (settings) {
+        return handleOnGenerateRoute(settings);
+      },
     );
   }
 }

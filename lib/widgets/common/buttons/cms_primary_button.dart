@@ -1,4 +1,3 @@
-import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/csm_base_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -25,13 +24,9 @@ class CmsPrimaryButton extends StatelessWidget {
       builder: (context, sizingInformation) {
         return InkWell(
           onTap: onButtonPressed,
-          child: Container(
+          child: SizedBox(
             height: height,
             width: sizingInformation.screenSize.width / widthDivisionValue,
-            // decoration: BoxDecoration(
-            //   color: ColorPathConstants.redColor,
-            //   borderRadius: BorderRadius.circular(30),
-            // ),
             child: Material(
               borderRadius: BorderRadius.circular(30),
               color: color,
