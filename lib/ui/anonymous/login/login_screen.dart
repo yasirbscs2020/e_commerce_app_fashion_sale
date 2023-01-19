@@ -9,6 +9,7 @@ import 'package:e_commerce_app_fashion_sale/widgets/common/textboxes/cms_primary
 import 'package:e_commerce_app_fashion_sale/widgets/widgets/sized_box.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatelessWidget {
   final String title;
@@ -21,98 +22,103 @@ class LoginPage extends StatelessWidget {
     }
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            cmsSizedBox(height: 15),
-            const CmsBackButton(),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 10, top: 20, right: 10, bottom: 30),
-              child: Text(
-                "Login",
-                style: CmsTextStyle.getCustomTextStyle(
-                    fontSize: 22, fontWeight: FontWeight.bold),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              cmsSizedBox(height: 20.h),
+              const CmsBackButton(),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: 14.w, top: 30.h, bottom: 50.h, right: 14.h),
+                child: Text(
+                  "Login",
+                  style: CmsTextStyle.getCustomTextStyle(
+                      fontSize: 34.sp, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: Column(
+              Padding(
+                padding: EdgeInsets.only(left: 16.w, right: 16.w),
+                child: Column(
+                  children: [
+                    const CmsTextBoxWidget(
+                        hintText: "email", labelText: "Email"),
+                    cmsSizedBox(height: 8.h),
+                    const CmsTextBoxWidget(
+                        hintText: "password", labelText: "Password"),
+                    cmsSizedBox(height: 16.h),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, RoutesName.forgotPassword);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "Forgot your password?",
+                            style: CmsTextStyle.getCustomTextStyle(
+                                fontSize: 14.sp),
+                          ),
+                          Icon(
+                            Icons.arrow_right_alt_rounded,
+                            color: ColorPathConstants.redColor,
+                            size: 15.r,
+                          ),
+                        ],
+                      ),
+                    ),
+                    cmsSizedBox(height: 30.h),
+                    CmsPrimaryButton(
+                      height: 48.h,
+                      text: "LOGIN",
+                      color: ColorPathConstants.redColor,
+                      textStyle: CmsTextStyle.getCustomTextStyle(
+                        color: ColorPathConstants.whiteColor,
+                        fontSize: 14.sp,
+                      ),
+                      onButtonPressed: () {
+                        Navigator.pushNamed(context, RoutesName.search);
+                      },
+                    ),
+                    // cmsSizedBox(height: 8.h),
+                    // CmsPrimaryButton(
+                    //   height: 48.h,
+                    //   text: "SIGN UP",
+                    //   color: ColorPathConstants.redColor,
+                    //   textStyle: CmsTextStyle.getCustomTextStyle(
+                    //     color: ColorPathConstants.whiteColor,
+                    //     fontSize: 14.sp,
+                    //   ),
+                    //   onButtonPressed: () {
+                    //     Navigator.pushNamed(context, RoutesName.signup);
+                    //   },
+                    // ),
+                  ],
+                ),
+              ),
+              cmsSizedBox(height: 120.h),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Or login with social account",
+                  style: CmsTextStyle.getCustomTextStyle(fontSize: 14.sp),
+                ),
+              ),
+              cmsSizedBox(height: 12.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  cmsSizedBox(),
-                  const CmsTextBoxWidget(hintText: "email", labelText: "Email"),
-                  cmsSizedBox(),
-                  const CmsTextBoxWidget(
-                      hintText: "password", labelText: "Password"),
-                  cmsSizedBox(height: 15),
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, RoutesName.forgotPassword);
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Forgot your password?",
-                          style: CmsTextStyle.getCustomTextStyle(fontSize: 15),
-                        ),
-                        const Icon(
-                          Icons.arrow_right_alt_rounded,
-                          color: ColorPathConstants.redColor,
-                        ),
-                      ],
-                    ),
-                  ),
-                  cmsSizedBox(height: 20),
-                  CmsPrimaryButton(
-                    text: "LOGIN",
-                    color: ColorPathConstants.redColor,
-                    textStyle: CmsTextStyle.getCustomTextStyle(
-                      color: ColorPathConstants.whiteColor,
-                      fontSize: 17,
-                    ),
-                    onButtonPressed: () {
-                      Navigator.pushNamed(context, RoutesName.search);
-                    },
-                  ),
-                  cmsSizedBox(height: 15),
-                  CmsPrimaryButton(
-                    text: "Sing Up",
-                    color: ColorPathConstants.redColor,
-                    textStyle: CmsTextStyle.getCustomTextStyle(
-                      color: ColorPathConstants.whiteColor,
-                      fontSize: 17,
-                    ),
-                    onButtonPressed: () {
-                      Navigator.pushNamed(context, RoutesName.signup);
-                    },
-                  ),
+                  const ContainerWithIcon(
+                      imagePath: ImagePathConstants.googleIconPath),
+                  cmsSizedBox(width: 16.w),
+                  const ContainerWithIcon(
+                      imagePath: ImagePathConstants.faceBookIconPath),
                 ],
               ),
-            ),
-            const Spacer(),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                "Or login with social account",
-                style: CmsTextStyle.getCustomTextStyle(fontSize: 15),
-              ),
-            ),
-            cmsSizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const ContainerWithIcon(
-                    imagePath: ImagePathConstants.googleIconPath),
-                cmsSizedBox(width: 15),
-                const ContainerWithIcon(
-                    imagePath: ImagePathConstants.faceBookIconPath),
-              ],
-            ),
-            cmsSizedBox(height: 20),
-          ],
+              cmsSizedBox(height: 20.h),
+            ],
+          ),
         ),
       ),
     );

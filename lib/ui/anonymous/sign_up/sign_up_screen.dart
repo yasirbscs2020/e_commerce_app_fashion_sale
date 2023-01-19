@@ -27,7 +27,7 @@ class SignUpPage extends StatelessWidget {
               const CmsBackButton(),
               Padding(
                 padding: EdgeInsets.only(
-                    left: 14.w, top: 34.h, bottom: 73.h, right: 14.h),
+                    left: 14.w, top: 20.h, bottom: 50.h, right: 14.h),
                 child: Text(
                   "Sign Up",
                   style: CmsTextStyle.getCustomTextStyle(
@@ -82,7 +82,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         onButtonPressed: () {},
                       ),
-                      cmsSizedBox(height: 126.h),
+                      cmsSizedBox(height: 80.h),
                       Text(
                         "Or sign up with social account",
                         style: CmsTextStyle.getCustomTextStyle(fontSize: 14.h),
@@ -96,7 +96,7 @@ class SignUpPage extends StatelessWidget {
                           cmsSizedBox(width: 16.w),
                           const ContainerWithIcon(
                               imagePath: ImagePathConstants.faceBookIconPath),
-                          cmsSizedBox(height: 40.h),
+                          cmsSizedBox(height: 20.h),
                         ],
                       )
                     ],
