@@ -41,6 +41,7 @@ class CmsTextBoxWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CmsBaseWidget(builder: (context, sizingInformation) {
       return Container(
+        height: 64.h,
         decoration: BoxDecoration(
           color: ColorPathConstants.whiteColor,
           borderRadius: BorderRadius.circular(4.r),
