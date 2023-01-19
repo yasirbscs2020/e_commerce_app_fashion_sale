@@ -5,6 +5,7 @@ import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_
 import 'package:e_commerce_app_fashion_sale/widgets/common/textboxes/cms_primary_text_box.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({Key? key}) : super(key: key);
@@ -18,36 +19,36 @@ class ForgotPasswordPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              cmsSizedBox(height: 15),
+              cmsSizedBox(height: 20.h),
               const CmsBackButton(),
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 10, top: 20, right: 10, bottom: 30),
+                padding: EdgeInsets.only(
+                    left: 14.w, top: 20.h, bottom: 87.h, right: 14.h),
                 child: Text(
                   "Forgot password",
                   style: CmsTextStyle.getCustomTextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold),
+                      fontSize: 34.sp, fontWeight: FontWeight.bold),
                 ),
               ),
-              cmsSizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
+                padding: EdgeInsets.only(left: 10.w, right: 10.w),
                 child: Column(
                   children: [
                     Text(
                       "Please, enter your email address. You will receive a link to create a new password via email.",
-                      style: CmsTextStyle.getCustomTextStyle(fontSize: 14),
+                      style: CmsTextStyle.getCustomTextStyle(fontSize: 14.sp),
                     ),
-                    cmsSizedBox(height: 15),
+                    cmsSizedBox(height: 16.h),
                     const CmsTextBoxWidget(
                         hintText: "email", labelText: "Email"),
-                    cmsSizedBox(height: 50),
+                    cmsSizedBox(height: 55.h),
                     CmsPrimaryButton(
+                      height: 40.h,
                       text: "SEND",
                       color: ColorPathConstants.redColor,
                       textStyle: CmsTextStyle.getCustomTextStyle(
                         color: ColorPathConstants.whiteColor,
-                        fontSize: 17,
+                        fontSize: 14.sp,
                       ),
                       onButtonPressed: () {},
                     ),
