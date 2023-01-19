@@ -19,7 +19,7 @@ class ForgotPasswordPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              cmsSizedBox(height: 20.h),
+              SizedBox(height: 20.h),
               const CmsBackButton(),
               Padding(
                 padding: EdgeInsets.only(
@@ -38,10 +38,10 @@ class ForgotPasswordPage extends StatelessWidget {
                       "Please, enter your email address. You will receive a link to create a new password via email.",
                       style: CmsTextStyle.getCustomTextStyle(fontSize: 14.sp),
                     ),
-                    cmsSizedBox(height: 16.h),
+                    SizedBox(height: 16.h),
                     const CmsTextBoxWidget(
                         hintText: "email", labelText: "Email"),
-                    cmsSizedBox(height: 55.h),
+                    SizedBox(height: 55.h),
                     CmsPrimaryButton(
                       height: 40.h,
                       text: "SEND",

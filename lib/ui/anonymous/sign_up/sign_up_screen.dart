@@ -23,7 +23,7 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              cmsSizedBox(height: 20.h),
+              SizedBox(height: 20.h),
               const CmsBackButton(),
               Padding(
                 padding: EdgeInsets.only(
@@ -42,13 +42,13 @@ class SignUpPage extends StatelessWidget {
                     children: [
                       const CmsTextBoxWidget(
                           hintText: "name", labelText: "Name"),
-                      cmsSizedBox(height: 8.h),
+                      SizedBox(height: 8.h),
                       const CmsTextBoxWidget(
                           hintText: "email", labelText: "Email"),
-                      cmsSizedBox(height: 8.h),
+                      SizedBox(height: 8.h),
                       const CmsTextBoxWidget(
                           hintText: "password", labelText: "Password"),
-                      cmsSizedBox(height: 16.h),
+                      SizedBox(height: 16.h),
                       GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, RoutesName.login,
@@ -70,7 +70,7 @@ class SignUpPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      cmsSizedBox(height: 28.h),
+                      SizedBox(height: 28.h),
                       CmsPrimaryButton(
                         height: 48.h,
                         width: 343.w,
@@ -82,21 +82,21 @@ class SignUpPage extends StatelessWidget {
                         ),
                         onButtonPressed: () {},
                       ),
-                      cmsSizedBox(height: 80.h),
+                      SizedBox(height: 80.h),
                       Text(
                         "Or sign up with social account",
                         style: CmsTextStyle.getCustomTextStyle(fontSize: 14.h),
                       ),
-                      cmsSizedBox(height: 12.h),
+                      SizedBox(height: 12.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const ContainerWithIcon(
                               imagePath: ImagePathConstants.googleIconPath),
-                          cmsSizedBox(width: 16.w),
+                          SizedBox(width: 16.w),
                           const ContainerWithIcon(
                               imagePath: ImagePathConstants.faceBookIconPath),
-                          cmsSizedBox(height: 20.h),
+                          SizedBox(height: 20.h),
                         ],
                       )
                     ],

@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              cmsSizedBox(height: 20.h),
+              SizedBox(height: 20.h),
               const CmsBackButton(),
               Padding(
                 padding: EdgeInsets.only(
@@ -44,10 +44,10 @@ class LoginPage extends StatelessWidget {
                   children: [
                     const CmsTextBoxWidget(
                         hintText: "email", labelText: "Email"),
-                    cmsSizedBox(height: 8.h),
+                    SizedBox(height: 8.h),
                     const CmsTextBoxWidget(
                         hintText: "password", labelText: "Password"),
-                    cmsSizedBox(height: 16.h),
+                    SizedBox(height: 16.h),
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, RoutesName.forgotPassword);
@@ -68,7 +68,7 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    cmsSizedBox(height: 30.h),
+                    SizedBox(height: 30.h),
                     CmsPrimaryButton(
                       height: 48.h,
                       text: "LOGIN",
@@ -81,23 +81,23 @@ class LoginPage extends StatelessWidget {
                         Navigator.pushNamed(context, RoutesName.search);
                       },
                     ),
-                    // cmsSizedBox(height: 8.h),
-                    // CmsPrimaryButton(
-                    //   height: 48.h,
-                    //   text: "SIGN UP",
-                    //   color: ColorPathConstants.redColor,
-                    //   textStyle: CmsTextStyle.getCustomTextStyle(
-                    //     color: ColorPathConstants.whiteColor,
-                    //     fontSize: 14.sp,
-                    //   ),
-                    //   onButtonPressed: () {
-                    //     Navigator.pushNamed(context, RoutesName.signup);
-                    //   },
-                    // ),
+                    SizedBox(height: 8.h),
+                    CmsPrimaryButton(
+                      height: 48.h,
+                      text: "SIGN UP",
+                      color: ColorPathConstants.redColor,
+                      textStyle: CmsTextStyle.getCustomTextStyle(
+                        color: ColorPathConstants.whiteColor,
+                        fontSize: 14.sp,
+                      ),
+                      onButtonPressed: () {
+                        Navigator.pushNamed(context, RoutesName.signup);
+                      },
+                    ),
                   ],
                 ),
               ),
-              cmsSizedBox(height: 120.h),
+              SizedBox(height: 120.h),
               Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -105,18 +105,18 @@ class LoginPage extends StatelessWidget {
                   style: CmsTextStyle.getCustomTextStyle(fontSize: 14.sp),
                 ),
               ),
-              cmsSizedBox(height: 12.h),
+              SizedBox(height: 12.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const ContainerWithIcon(
                       imagePath: ImagePathConstants.googleIconPath),
-                  cmsSizedBox(width: 16.w),
+                  SizedBox(width: 16.w),
                   const ContainerWithIcon(
                       imagePath: ImagePathConstants.faceBookIconPath),
                 ],
               ),
-              cmsSizedBox(height: 20.h),
+              SizedBox(height: 20.h),
             ],
           ),
         ),
