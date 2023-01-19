@@ -18,7 +18,6 @@ class HomePage extends StatelessWidget {
           const Text("Home Page"),
           CmsPrimaryButton(
             text: "LOGIN",
-            widthDivisionValue: 1,
             color: ColorPathConstants.redColor,
             textStyle: CmsTextStyle.getCustomTextStyle(
               color: ColorPathConstants.whiteColor,

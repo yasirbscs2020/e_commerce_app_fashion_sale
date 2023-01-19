@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CmsBackButton extends StatelessWidget {
   const CmsBackButton({Key? key}) : super(key: key);
@@ -6,12 +7,12 @@ class CmsBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10),
+      padding: EdgeInsets.only(left: 15.w, right: 10.w),
       child: InkWell(
         onTap: () {
           Navigator.pop(context);
         },
-        child: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+        child: Icon(Icons.arrow_back_ios_new_rounded, size: 16.r),
       ),
     );
   }

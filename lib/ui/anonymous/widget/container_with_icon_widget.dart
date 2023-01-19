@@ -1,6 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
-import 'package:e_commerce_app_fashion_sale/widgets/common/csm_base_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContainerWithIcon extends StatelessWidget {
   const ContainerWithIcon({required this.imagePath, super.key});
@@ -8,19 +8,15 @@ class ContainerWithIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CmsBaseWidget(
-      builder: (context, sizingInformation) {
-        return Container(
-          height: sizingInformation.screenSize.width / 6,
-          width: sizingInformation.screenSize.width / 4.5,
-          decoration: BoxDecoration(
-              color: ColorPathConstants.whiteColor,
-              borderRadius: BorderRadius.circular(22)),
-          child: Center(
-            child: Image.asset(imagePath, height: 25),
-          ),
-        );
-      },
+    return Container(
+      height: 64.h,
+      width: 92.w,
+      decoration: BoxDecoration(
+          color: ColorPathConstants.whiteColor,
+          borderRadius: BorderRadius.circular(24.r)),
+      child: Center(
+        child: Image.asset(imagePath, height: 24.h),
+      ),
     );
   }
 }

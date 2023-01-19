@@ -65,7 +65,6 @@ class VisualSearchPage extends StatelessWidget {
                             cmsSizedBox(height: 20),
                             CmsPrimaryButton(
                               text: "TAKE A PHOTO",
-                              widthDivisionValue: 1,
                               color: ColorPathConstants.redColor,
                               textStyle: CmsTextStyle.getCustomTextStyle(
                                 color: ColorPathConstants.whiteColor,

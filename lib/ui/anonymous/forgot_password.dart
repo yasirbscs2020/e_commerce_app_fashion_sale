@@ -44,7 +44,6 @@ class ForgotPasswordPage extends StatelessWidget {
                     cmsSizedBox(height: 50),
                     CmsPrimaryButton(
                       text: "SEND",
-                      widthDivisionValue: 1,
                       color: ColorPathConstants.redColor,
                       textStyle: CmsTextStyle.getCustomTextStyle(
                         color: ColorPathConstants.whiteColor,

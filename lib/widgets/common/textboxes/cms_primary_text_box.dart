@@ -1,6 +1,7 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/csm_base_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CmsTextBoxWidget extends StatelessWidget {
   const CmsTextBoxWidget(
@@ -42,19 +43,21 @@ class CmsTextBoxWidget extends StatelessWidget {
       return Container(
         decoration: BoxDecoration(
           color: ColorPathConstants.whiteColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(4.r),
         ),
         child: Center(
           child: TextField(
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               labelText: labelText,
-              labelStyle: const TextStyle(color: ColorPathConstants.greyColor),
-              hintStyle: const TextStyle(
-                  fontSize: 16, color: ColorPathConstants.greyColor),
+              labelStyle: TextStyle(
+                  color: ColorPathConstants.greyColor, fontSize: 12.sp),
+              hintStyle: TextStyle(
+                  fontSize: 14.sp, color: ColorPathConstants.greyColor),
               hintText: hintText,
               border: InputBorder.none,
-              contentPadding: const EdgeInsets.all(12),
+              contentPadding:
+                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w),
             ),
           ),
         ),

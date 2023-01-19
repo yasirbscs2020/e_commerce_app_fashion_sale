@@ -9,6 +9,7 @@ import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_
 import 'package:e_commerce_app_fashion_sale/widgets/common/textboxes/cms_primary_text_box.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -22,33 +23,32 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              cmsSizedBox(height: 15),
+              cmsSizedBox(height: 20.h),
               const CmsBackButton(),
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 10, top: 20, bottom: 30, right: 10),
+                padding: EdgeInsets.only(
+                    left: 14.w, top: 34.h, bottom: 73.h, right: 14.h),
                 child: Text(
                   "Sign Up",
                   style: CmsTextStyle.getCustomTextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold),
+                      fontSize: 34.sp, fontWeight: FontWeight.bold),
                 ),
               ),
-              cmsSizedBox(),
               Form(
                 child: Padding(
                   padding:
-                      const EdgeInsets.only(left: 10, right: 10, bottom: 20),
+                      EdgeInsets.only(left: 10.w, right: 10.w, bottom: 20.h),
                   child: Column(
                     children: [
                       const CmsTextBoxWidget(
                           hintText: "name", labelText: "Name"),
-                      cmsSizedBox(),
+                      cmsSizedBox(height: 8.h),
                       const CmsTextBoxWidget(
                           hintText: "email", labelText: "Email"),
-                      cmsSizedBox(),
+                      cmsSizedBox(height: 8.h),
                       const CmsTextBoxWidget(
                           hintText: "password", labelText: "Password"),
-                      cmsSizedBox(height: 15),
+                      cmsSizedBox(height: 16.h),
                       GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, RoutesName.login,
@@ -59,42 +59,44 @@ class SignUpPage extends StatelessWidget {
                           children: [
                             Text(
                               "Already have an account?",
-                              style:
-                                  CmsTextStyle.getCustomTextStyle(fontSize: 15),
+                              style: CmsTextStyle.getCustomTextStyle(
+                                  fontSize: 14.sp),
                             ),
-                            const Icon(
+                            Icon(
                               Icons.arrow_right_alt_rounded,
                               color: ColorPathConstants.redColor,
+                              size: 15.r,
                             ),
                           ],
                         ),
                       ),
-                      cmsSizedBox(height: 20),
+                      cmsSizedBox(height: 28.h),
                       CmsPrimaryButton(
+                        height: 48.h,
+                        width: 343.w,
                         text: "SIGN UP",
-                        widthDivisionValue: 1,
                         color: ColorPathConstants.redColor,
                         textStyle: CmsTextStyle.getCustomTextStyle(
                           color: ColorPathConstants.whiteColor,
-                          fontSize: 17,
+                          fontSize: 14.sp,
                         ),
                         onButtonPressed: () {},
                       ),
-                      cmsSizedBox(height: 35),
+                      cmsSizedBox(height: 126.h),
                       Text(
                         "Or sign up with social account",
-                        style: CmsTextStyle.getCustomTextStyle(fontSize: 15),
+                        style: CmsTextStyle.getCustomTextStyle(fontSize: 14.h),
                       ),
-                      cmsSizedBox(height: 15),
+                      cmsSizedBox(height: 12.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const ContainerWithIcon(
                               imagePath: ImagePathConstants.googleIconPath),
-                          cmsSizedBox(width: 15),
+                          cmsSizedBox(width: 16.w),
                           const ContainerWithIcon(
                               imagePath: ImagePathConstants.faceBookIconPath),
-                          cmsSizedBox(width: 25),
+                          cmsSizedBox(height: 40.h),
                         ],
                       )
                     ],

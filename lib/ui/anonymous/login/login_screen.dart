@@ -1,7 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
 import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
-import 'package:e_commerce_app_fashion_sale/ui/anonymous/forgot_password.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/widget/container_with_icon_widget.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
@@ -69,7 +68,6 @@ class LoginPage extends StatelessWidget {
                   cmsSizedBox(height: 20),
                   CmsPrimaryButton(
                     text: "LOGIN",
-                    widthDivisionValue: 1,
                     color: ColorPathConstants.redColor,
                     textStyle: CmsTextStyle.getCustomTextStyle(
                       color: ColorPathConstants.whiteColor,
@@ -82,7 +80,6 @@ class LoginPage extends StatelessWidget {
                   cmsSizedBox(height: 15),
                   CmsPrimaryButton(
                     text: "Sing Up",
-                    widthDivisionValue: 1,
                     color: ColorPathConstants.redColor,
                     textStyle: CmsTextStyle.getCustomTextStyle(
                       color: ColorPathConstants.whiteColor,
