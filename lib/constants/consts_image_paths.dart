@@ -7,5 +7,6 @@ class ImagePathConstants {
   static const String visualSearchBackGrounImage =
       "assets/images/visual_search_background_pic.png";
   //dummy
-  static const String sliderDummyImage = "assets/dummy/slider_dummy_image.png";
+  static const String dashBoardDummy1 = "assets/dummy/dash_board_dummy1.png";
+  static const String dashBoardDummy2 = "assets/dummy/dashboard_dummy2.png";
 }

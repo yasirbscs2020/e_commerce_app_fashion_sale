@@ -15,7 +15,20 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text("Home Page"),
+          // const Text("Home Page"),
+          CmsPrimaryButton(
+            text: "Dashboard",
+            color: ColorPathConstants.redColor,
+            textStyle: CmsTextStyle.getCustomTextStyle(
+              color: ColorPathConstants.whiteColor,
+              fontSize: 17,
+            ),
+            onButtonPressed: () {
+              Navigator.pushNamed(context, RoutesName.dashboard,
+                  arguments: LoginPageArguments("From Home Screen"));
+            },
+          ),
+          SizedBox(height: 10),
           CmsPrimaryButton(
             text: "LOGIN",
             color: ColorPathConstants.redColor,

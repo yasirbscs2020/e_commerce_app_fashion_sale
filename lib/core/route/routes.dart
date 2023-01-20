@@ -2,6 +2,7 @@ import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/forgot_password.dart';
 import 'package:e_commerce_app_fashion_sale/ui/anonymous/sign_up/sign_up_screen.dart';
 import 'package:e_commerce_app_fashion_sale/ui/common/visual_search/visual_search_screen.dart';
+import 'package:e_commerce_app_fashion_sale/ui/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/Home/home_screen.dart';
@@ -14,6 +15,7 @@ Map<String, WidgetBuilder> getAppRoutes() {
     RoutesName.signup: (context) => const SignUpPage(),
     RoutesName.search: (context) => const VisualSearchPage(),
     RoutesName.forgotPassword: (context) => const ForgotPasswordPage(),
+    RoutesName.dashboard: (context) => const DashBoardPage(),
   };
 }
 

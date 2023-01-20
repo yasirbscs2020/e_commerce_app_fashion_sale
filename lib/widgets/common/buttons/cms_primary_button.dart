@@ -27,7 +27,7 @@ class CmsPrimaryButton extends StatelessWidget {
       onTap: onButtonPressed,
       child: Container(
         height: 48.h,
-        width: double.infinity,
+        width: width,
         decoration: BoxDecoration(
             color: color,
             border: border,
