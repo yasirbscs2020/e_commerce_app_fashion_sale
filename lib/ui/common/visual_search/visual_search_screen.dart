@@ -1,13 +1,21 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
+import 'package:e_commerce_app_fashion_sale/ui/common/image_picker_screen.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+enum ImageSourceType { gallery, camera }
 
 class VisualSearchPage extends StatelessWidget {
   const VisualSearchPage({super.key});
+  void _handleURLButtonPress(BuildContext context, var type) {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => ImagePickerPage(type)));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +76,10 @@ class VisualSearchPage extends StatelessWidget {
                             color: ColorPathConstants.whiteColor,
                             fontSize: 14.sp,
                           ),
-                          onButtonPressed: () {},
+                          onButtonPressed: () {
+                            _handleURLButtonPress(
+                                context, ImageSourceType.camera);
+                          },
                         ),
                         SizedBox(height: 16.h),
                         CmsPrimaryButton(
@@ -80,7 +91,10 @@ class VisualSearchPage extends StatelessWidget {
                             color: ColorPathConstants.whiteColor,
                             fontSize: 14.sp,
                           ),
-                          onButtonPressed: () {},
+                          onButtonPressed: () {
+                            _handleURLButtonPress(
+                                context, ImageSourceType.gallery);
+                          },
                         ),
                       ],
                     ),
