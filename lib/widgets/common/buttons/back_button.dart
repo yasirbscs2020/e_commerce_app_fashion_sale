@@ -12,7 +12,7 @@ class CmsBackButton extends StatelessWidget {
         onTap: () {
           Navigator.pop(context);
         },
-        child: Icon(Icons.arrow_back_ios_new_rounded, size: 16.r),
+        child: Icon(Icons.arrow_back_ios_new_rounded, size: 24.r),
       ),
     );
   }

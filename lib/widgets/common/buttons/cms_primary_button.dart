@@ -36,7 +36,7 @@ class CmsPrimaryButton extends StatelessWidget {
           child: Text(
             text,
             style: CmsTextStyle.getCustomTextStyle(
-                fontSize: 14,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
                 color: ColorPathConstants.whiteColor),
           ),

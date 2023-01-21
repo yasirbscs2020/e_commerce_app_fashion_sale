@@ -100,8 +100,8 @@ class _NewProductCardHomeWidgetState extends State<NewProductCardHomeWidget> {
           ],
         ),
         Positioned(
-          bottom: 108.h,
-          right: 0,
+          bottom: 85.h,
+          right: -5,
           child: Container(
             height: 36.h,
             width: 36.w,

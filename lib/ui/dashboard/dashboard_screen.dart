@@ -1,3 +1,4 @@
+import 'package:e_commerce_app_fashion_sale/ui/common/categories/category_screen.dart';
 import 'package:e_commerce_app_fashion_sale/ui/dashboard/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +17,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
 
   final pages = [
     const HomePage1(),
+    const CategoryPage(),
   ];
 
   @override
@@ -57,11 +59,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
               ),
               label: 'Profile'),
         ],
-        // onTap: (index) {
-        //   setState(() {
-        //     currentIndex = index;
-        //   });
-        // },
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }

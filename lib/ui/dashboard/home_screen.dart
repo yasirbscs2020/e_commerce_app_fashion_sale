@@ -30,7 +30,7 @@ class HomePage1 extends StatelessWidget {
                     bottom: 32.h,
                     child: Padding(
                       padding:
-                          EdgeInsets.only(left: 14.w, top: 20.h, right: 14.h),
+                          EdgeInsets.only(left: 10.w, top: 20.h, right: 10.h),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -56,7 +56,7 @@ class HomePage1 extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 33.h),
+              SizedBox(height: 27.h),
               ListTile(
                 title: Text(
                   "New",
@@ -75,7 +75,7 @@ class HomePage1 extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               SizedBox(
-                height: 320.h,
+                height: 340.h,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
@@ -84,7 +84,7 @@ class HomePage1 extends StatelessWidget {
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 6.w),
                       child: Row(
-                        children: [
+                        children: const [
                           NewProductCardHomeWidget(),
                         ],
                       ),
@@ -92,7 +92,7 @@ class HomePage1 extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
             ],
           ),
         ),
