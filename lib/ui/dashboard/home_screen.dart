@@ -75,22 +75,24 @@ class HomePage1 extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               SizedBox(
-                height: 230.h,
+                height: 320.h,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.w),
-                        child: Row(
-                          children: [
-                            NewProductCardHomeWidget(),
-                          ],
-                        ));
+                      padding: EdgeInsets.symmetric(horizontal: 6.w),
+                      child: Row(
+                        children: [
+                          NewProductCardHomeWidget(),
+                        ],
+                      ),
+                    );
                   },
                 ),
               ),
+              SizedBox(height: 15),
             ],
           ),
         ),

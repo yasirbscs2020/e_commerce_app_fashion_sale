@@ -26,7 +26,7 @@ class CmsPrimaryButton extends StatelessWidget {
     return InkWell(
       onTap: onButtonPressed,
       child: Container(
-        height: 48.h,
+        height: height,
         width: width,
         decoration: BoxDecoration(
             color: color,

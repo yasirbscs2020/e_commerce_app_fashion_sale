@@ -1,6 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
 import '../../core/route/login_page_arguments.dart';
 import '../../widgets/common/buttons/cms_primary_button.dart';
@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
         children: [
           // const Text("Home Page"),
           CmsPrimaryButton(
+            height: 48.h,
             text: "Dashboard",
             color: ColorPathConstants.redColor,
             textStyle: CmsTextStyle.getCustomTextStyle(
@@ -28,8 +29,9 @@ class HomePage extends StatelessWidget {
                   arguments: LoginPageArguments("From Home Screen"));
             },
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CmsPrimaryButton(
+            height: 48.h,
             text: "LOGIN",
             color: ColorPathConstants.redColor,
             textStyle: CmsTextStyle.getCustomTextStyle(
