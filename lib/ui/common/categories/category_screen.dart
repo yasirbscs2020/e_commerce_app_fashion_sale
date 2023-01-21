@@ -26,36 +26,36 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
         body: Column(
           children: [
             Container(
-              height: 100.h,
-              decoration: BoxDecoration(
+              padding: EdgeInsets.only(right: 10.w),
+              height: 60.h,
+              decoration: const BoxDecoration(
+                color: ColorPathConstants.whiteColor,
                 boxShadow: [
-                  // BoxShadow(
-                  //   color: Colors.grey.withOpacity(0.1),
-                  //   spreadRadius: 1,
-                  //   blurRadius: 1,
-                  //   offset: Offset(1, 4), // changes position of shadow
-                  // ),
+                  BoxShadow(
+                    color: ColorPathConstants.lightGrey,
+                    blurRadius: 1,
+                    offset: Offset(0, 1),
+                  ),
                 ],
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const CmsBackButton(),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: 14.w, top: 20.h, bottom: 50.h, right: 14.h),
-                    child: Text(
-                      "Categories",
-                      style: CmsTextStyle.getCustomTextStyle(
-                          fontSize: 18.sp, fontWeight: FontWeight.bold),
-                    ),
+                  Text(
+                    "Categories",
+                    style: CmsTextStyle.getCustomTextStyle(
+                        fontSize: 18.sp, fontWeight: FontWeight.bold),
                   ),
                   Icon(Icons.search, size: 30.r),
                 ],
               ),
             ),
+            SizedBox(height: 12.h),
             Container(
-              height: 100,
+              height: 44.h,
+              color: ColorPathConstants.whiteColor,
               child: TabBar(
                 indicatorColor: ColorPathConstants.redColor,
                 controller: _tabController,
@@ -64,27 +64,59 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
                     padding: EdgeInsets.symmetric(vertical: 8.h),
                     child: Text(
                       'Women',
-                      style: CmsTextStyle.getCustomTextStyle(),
+                      style: CmsTextStyle.getCustomTextStyle(fontSize: 16.sp),
                     ),
                   ),
                   Text(
                     'Men',
-                    style: CmsTextStyle.getCustomTextStyle(),
+                    style: CmsTextStyle.getCustomTextStyle(fontSize: 16.sp),
                   ),
                   Text(
                     'Kids',
-                    style: CmsTextStyle.getCustomTextStyle(),
+                    style: CmsTextStyle.getCustomTextStyle(fontSize: 16.sp),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 0.6.h),
-            Container(
-              height: 200,
+            SizedBox(height: 15.h),
+            Expanded(
               child: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
-                  Text("data"),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(right: 10.w),
+                          height: 100.h,
+                          width: 343.w,
+                          decoration: BoxDecoration(
+                              color: ColorPathConstants.redColor,
+                              borderRadius: BorderRadius.circular(8.r)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "SUMMER SALES",
+                                style: CmsTextStyle.getCustomTextStyle(
+                                    color: ColorPathConstants.whiteColor,
+                                    fontSize: 24.sp,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "Up to 50% off",
+                                style: CmsTextStyle.getCustomTextStyle(
+                                  color: ColorPathConstants.whiteColor,
+                                  fontSize: 14.sp,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
