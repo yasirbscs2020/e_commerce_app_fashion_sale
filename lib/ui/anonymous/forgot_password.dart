@@ -4,6 +4,7 @@ import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_b
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/textboxes/cms_primary_text_box.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ForgotPasswordPage extends StatelessWidget {

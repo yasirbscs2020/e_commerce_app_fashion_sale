@@ -3,6 +3,7 @@ import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:e_commerce_app_fashion_sale/model/category/women_category_model.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoryCardWidget extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContainerWithIcon extends StatelessWidget {

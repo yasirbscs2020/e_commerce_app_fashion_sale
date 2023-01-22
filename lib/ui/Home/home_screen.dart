@@ -1,5 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
 import '../../core/route/login_page_arguments.dart';

@@ -2,6 +2,7 @@ import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
 import 'package:e_commerce_app_fashion_sale/model/category/choose_category_model.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ChooseCategoryWidget extends StatelessWidget {
@@ -15,7 +16,7 @@ class ChooseCategoryWidget extends StatelessWidget {
       },
       child: Container(
         height: 80.h,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(
               width: 1.0,

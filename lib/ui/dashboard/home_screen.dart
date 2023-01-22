@@ -4,6 +4,7 @@ import 'package:e_commerce_app_fashion_sale/ui/dashboard/widget/new_product_card
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/cms_primary_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage1 extends StatelessWidget {

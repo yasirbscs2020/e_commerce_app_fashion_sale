@@ -1,5 +1,6 @@
 import 'package:e_commerce_app_fashion_sale/ui/common/visual_search/visual_search_screen.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:image_picker/image_picker.dart';
 
 class ImagePickerPage extends StatefulWidget {

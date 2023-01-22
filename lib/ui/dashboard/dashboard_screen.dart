@@ -1,6 +1,7 @@
 import 'package:e_commerce_app_fashion_sale/ui/common/categories/category_screen.dart';
 import 'package:e_commerce_app_fashion_sale/ui/dashboard/home_screen.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DashBoardPage extends StatefulWidget {
