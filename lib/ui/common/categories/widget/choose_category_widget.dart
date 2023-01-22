@@ -1,4 +1,5 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
+import 'package:e_commerce_app_fashion_sale/core/route/routes_names.dart';
 import 'package:e_commerce_app_fashion_sale/model/category/choose_category_model.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class ChooseCategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.pushNamed(context, RoutesName.chooseCategory);
+        Navigator.pushNamed(context, RoutesName.catalogOneScreen);
       },
       child: Container(
         height: 80.h,

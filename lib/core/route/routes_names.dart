@@ -6,4 +6,5 @@ class RoutesName {
   static const String forgotPassword = "/forgot_password";
   static const String dashboard = "/dashboard";
   static const String chooseCategory = "/choose_category";
+  static const String catalogOneScreen = "/catalog_one_screen";
 }
