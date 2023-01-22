@@ -1,4 +1,7 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
+import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
+import 'package:e_commerce_app_fashion_sale/model/category/women_category_model.dart';
+import 'package:e_commerce_app_fashion_sale/ui/common/categories/widget/category_card_widget.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/text_styles/cms_text_style.dart';
 import 'package:flutter/material.dart';
@@ -78,8 +81,9 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            SizedBox(height: 15.h),
-            Expanded(
+            SizedBox(height: 16.h),
+            SizedBox(
+              height: 100.h,
               child: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
@@ -88,9 +92,8 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(right: 10.w),
                           height: 100.h,
-                          width: 343.w,
+                          width: double.infinity,
                           decoration: BoxDecoration(
                               color: ColorPathConstants.redColor,
                               borderRadius: BorderRadius.circular(8.r)),
@@ -119,7 +122,7 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
+                        EdgeInsets.symmetric(horizontal: 6.w, vertical: 10.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -135,6 +138,21 @@ class _MyState extends State<CategoryPage> with TickerProviderStateMixin {
                     style: CmsTextStyle.getCustomTextStyle(),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(height: 10.h),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  WomenCategoryModel model = WomenCategoryModel();
+                  return Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 6.w, horizontal: 16.w),
+                      child: CategoryCardWidget(womenCategoryModel: model));
+                },
               ),
             ),
           ],

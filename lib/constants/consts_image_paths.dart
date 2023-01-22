@@ -10,4 +10,8 @@ class ImagePathConstants {
   static const String dashBoardDummy1 = "assets/dummy/dash_board_dummy1.png";
   static const String dashBoardDummy2 =
       "assets/dummy/dashboard_male_dummy2.png";
+  static const String categoryNnewBrand =
+      "assets/dummy/category_new_brand_dummy_pic.png";
+      static const String womenCategoryClothesDummyPic =
+      "assets/dummy/category_clothes_dummy_pic.png";
 }
