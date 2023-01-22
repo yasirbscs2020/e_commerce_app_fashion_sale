@@ -1,5 +1,4 @@
 import 'package:e_commerce_app_fashion_sale/constants/colors.dart';
-import 'package:e_commerce_app_fashion_sale/constants/consts_image_paths.dart';
 import 'package:e_commerce_app_fashion_sale/model/category/women_category_model.dart';
 import 'package:e_commerce_app_fashion_sale/ui/common/categories/widget/category_card_widget.dart';
 import 'package:e_commerce_app_fashion_sale/widgets/common/buttons/back_button.dart';
